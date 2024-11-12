@@ -30,6 +30,7 @@ header {
     gap: 10px;
     padding: 20px;
     background-color: #f9f0d7;
+    text-align: center;
 }
 
 .logo-title {
@@ -62,6 +63,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+    color: rgb(184, 81, 81);
 }
 
 section {
