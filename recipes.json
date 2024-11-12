@@ -1,0 +1,15 @@
+{
+    "recipes": [
+        {
+            "title": "Chocolate Chip Cookies",
+            "link": "recipe1.html",
+            "description": "A classic, chewy chocolate chip cookie."
+        },
+        {
+            "title": "Banana Bread",
+            "link": "recipe2.html",
+            "description": "A moist and delicious banana bread recipe."
+        }
+        // Add more recipes here
+    ]
+}

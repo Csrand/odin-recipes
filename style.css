@@ -1,0 +1,136 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f0d7;
+    /* Cor de fundo leve */
+    color: #333;
+    /* Cor do texto */
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #f9f0d7;
+    color: rgb(184, 81, 81);
+    padding: 20px 0;
+    /* Espaçamento em cima e embaixo */
+    text-align: center;
+}
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #f9f0d7;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logo {
+    width: 60px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    /* Espaço entre os itens de navegação */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a {
+    color: rgb(184, 81, 81);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+    background: #f9f0d7;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+h1{
+    font-size: 1.8em;
+    color: #b85151;
+}
+h2 {
+    color:#b85151;
+    margin-bottom: 15px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 500px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #b85151;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #b85151;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #f9f0d7;
+    color: #b85151;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
