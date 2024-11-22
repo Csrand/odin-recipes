@@ -1,38 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mad & Dreamer</title>
     <link rel="stylesheet" href="./css/recipes.css">
 </head>
+
 <body>
     <header class="header-container">
         <div class="logo-title">
             <img id="logo" src="./imgs/joker.png" alt="logo">
-            <h1>Mad & Dreamer Cook's!</h1>
+            <h1>Mad & Dreamer!</h1>
         </div>
         <nav aria-label="Navegação principal">
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="/receitas.html">Recipes</a></li>
                 <li><a href="#sobre">About</a></li>
                 <li><a href="#contato">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section id="recipe-1">
-        <h2>Simple Cake</h2>
-        <p>
-            Here's a short description for a simple cake:
-            
-            "A simple, moist cake made with basic ingredients like flour, sugar, and eggs, perfect for any occasion. Light and
-            fluffy, it's a delicious treat that's easy to make and enjoy."
-        </p>
-        <figure>
-            <img src="./imgs/simplecake.jpg" alt="simple-cake" class="recipe-image">
-        </figure>
+    <section id="recipe-1" class="recipe-section">
+        <div class="recipe-image">
+            <img src="./imgs/simplecake.jpg" alt="simple-cake">
+        </div>
+        <div class="recipe-text-container">
+            <div class="recipe-info">
+                <h2>Simple Cake</h2>
+                <p>"A simple, moist cake made with basic ingredients like flour, sugar, and eggs, perfect for any
+                    occasion.
+                    Light and fluffy, it's a delicious treat that's easy to make and enjoy."</p>
+            </div>
+            <div class="rating" role="radiogroup" aria-label="Avaliação da receita">
+                <input type="radio" name="star" id="star1" value="1">
+                <label for="star1" title="1 estrela">☆</label>
+
+                <input type="radio" name="star" id="star2" value="2">
+                <label for="star2" title="2 estrelas">☆</label>
+
+                <input type="radio" name="star" id="star3" value="3">
+                <label for="star3" title="3 estrelas">☆</label>
+
+                <input type="radio" name="star" id="star4" value="4">
+                <label for="star4" title="4 estrelas">☆</label>
+
+                <input type="radio" name="star" id="star5" value="5">
+                <label for="star5" title="5 estrelas">☆</label>
+            </div>
+        </div>
     </section>
-    
 </body>
+
 </html>

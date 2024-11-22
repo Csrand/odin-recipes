@@ -8,30 +8,18 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f0d7;
-    /* Cor de fundo leve */
     color: #333;
-    /* Cor do texto */
     line-height: 1.6;
 }
 
 /* Estilo do cabeçalho */
-header {
-    background-color: #f9f0d7;
-    color: rgb(184, 81, 81);
-    padding: 20px 0;
-    /* Espaçamento em cima e embaixo */
-    text-align: center;
-}
-
 .header-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
     padding: 20px;
     background-color: #f9f0d7;
-    text-align: center;
+    color: rgb(184, 81, 81);
 }
 
 .logo-title {
@@ -49,7 +37,6 @@ nav ul {
     list-style-type: none;
     display: flex;
     gap: 15px;
-    /* Espaço entre os itens de navegação */
 }
 
 nav ul li {
@@ -67,7 +54,12 @@ nav a:hover {
     color: rgb(184, 81, 81);
 }
 
-section {
+/* Estilo da seção de receita */
+.recipe-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
     margin: 10px 0;
     background: #f9f0d7;
@@ -75,7 +67,68 @@ section {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
- .recipe-image{
+.recipe-image {
+    flex: 0 0 auto;
+    /* Não deixa a imagem encolher */
+}
+
+.recipe-image img {
     width: 250px;
     height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.recipe-text-container {
+    flex: 1;
+    /* Preenche o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Espaço entre o texto e a avaliação */
+    width: 100%;
+    /* Garante que o texto ocupe toda a largura disponível */
+}
+
+.recipe-info {
+    flex: 1;
+    /* Preenche o espaço disponível */
+}
+
+/* Estilo para a área de avaliação (estrela) */
+.rating {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Hover para as estrelas (da esquerda para a direita) */
+.rating input:checked~label,
+.rating label:hover,
+.rating label:hover~label {
+    color: gold;
+}
+
+/* Media query para design responsivo */
+@media (max-width: 768px) {
+    .recipe-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe-image img {
+        width: 100%;
+        height: auto;
+    }
 }
