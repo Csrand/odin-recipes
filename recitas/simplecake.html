@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encontre receitas deliciosas e fáceis de preparar no nosso site!">
+    <meta name="keywords" content="receitas, culinária, pratos, sobremesas">
+    <title>Mad & Dreamer! - Receita de Bolo Simples</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header */
+        .header-container {
+            background-color: #f9f0d7;
+            color: #b85151;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #logo {
+            width: 60px;
+            height: auto;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            color: #b85151;
+        }
+
+        /* Conteúdo da receita */
+        .recipe-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Conteúdo da receita */
+        .recipe-content {
+            display: flex;
+            align-items: flex-start;
+            /* Ajusta a altura de imagem e lista */
+            gap: 20px;
+        }
+
+        /* Imagem da receita */
+        .recipe-image {
+            width: 40%;
+            /* Ajusta a largura da imagem */
+            height: auto;
+            max-height: 350px;
+            /* Limita a altura da imagem para não exagerar */
+            object-fit: cover;
+            /* Ajusta a imagem sem deformar */
+            border-radius: 8px;
+        }
+
+        /* Ingredientes */
+        .ingredients-section {
+            width: 50%;
+            /* Ingredientes ajustados para 50% */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients-section h3 {
+            font-size: 1.8rem;
+            color: #b85151;
+            margin-bottom: 15px;
+        }
+
+        .ingredients-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .ingredients-list li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .ingredients-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #b85151;
+        }
+
+        /* Preparação */
+        .preparation-section {
+            margin-top: 40px;
+        }
+
+        .preparation-section h3 {
+            font-size: 1.8rem;
+            color: #b85151;
+            margin-bottom: 15px;
+        }
+
+        .instructions-list {
+            list-style: decimal;
+            padding-left: 20px;
+        }
+
+        .instructions-list li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .recipe-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .recipe-image,
+            .ingredients-section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header-container">
+        <div class="logo-title">
+            <img id="logo" src="/imgs/joker.png" alt="logo">
+            <h1>Survival Kit For Beginners!</h1>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="/recipes.html">Recipes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="recipe-container">
+        <section class="recipe-header">
+            <h2>Recipe: Simple Cake</h2>
+            <div class="recipe-content">
+                <img src="/imgs/simplecake.jpg" alt="Simple Cake" class="recipe-image">
+                <div class="ingredients-section">
+                    <h3>Ingredients</h3>
+                    <ul class="ingredients-list">
+                        <li>2 cups sugar</li>
+                        <li>3 cups all-purpose flour</li>
+                        <li>1 cup milk</li>
+                        <li>4 eggs</li>
+                        <li>1 tablespoon baking powder</li>
+                        <li>1 teaspoon vanilla extract</li>
+                        <li>1/2 cup vegetable oil</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preparation Section -->
+        <section class="preparation-section">
+            <h3>Preparation</h3>
+            <ol class="instructions-list">
+                <li>Preheat the oven to 180°C (350°F).</li>
+                <li>Grease and flour a cake pan.</li>
+                <li>In a mixing bowl, combine sugar, flour, milk, eggs, baking powder, vanilla extract, and oil.</li>
+                <li>Beat the mixture until smooth and pour it into the prepared pan.</li>
+                <li>Bake for 30-40 minutes or until the cake is golden brown and a toothpick inserted in the center
+                    comes out clean.</li>
+                <li>Remove from the oven, let cool slightly, and serve.</li>
+            </ol>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2024 Mad & Dreamer. All rights reserved.</p>
+                <p><a href="#contact">Contact</a> | <a href="#about">About</a></p>
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>

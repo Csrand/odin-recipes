@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple and delicious homemade bread recipe, easy to prepare at home.">
+    <meta name="keywords" content="homemade bread, bread recipe, simple bread, bread recipes">
+    <title>Simple Homemade Bread</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #f9f0d7;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #logo {
+            width: 60px;
+            height: auto;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            color: #b85151;
+        }
+
+        .recipe-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .recipe-image {
+            flex: 1;
+            max-width: 40%;
+        }
+
+        .recipe-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .recipe-text {
+            flex: 1;
+            max-width: 55%;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .ingredients ul,
+        .preparation ul {
+            padding-left: 20px;
+        }
+
+        .ingredients li,
+        .preparation li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f0d7;
+            margin-top: 40px;
+        }
+
+        /* Make the page responsive */
+        @media (max-width: 768px) {
+            .recipe-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .recipe-image,
+            .recipe-text {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-title">
+            <img id="logo" src="/imgs/joker.png" alt="logo">
+            <h1>Simple Homemade Bread</h1>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/recipes.html">Recipes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="recipe-section">
+            <div class="recipe-image">
+                <img src="/imgs/pao.webp" alt="Simple Homemade Bread">
+            </div>
+            <div class="recipe-text">
+                <h2>Ingredients</h2>
+                <ul class="ingredients">
+                    <li>1 kg of wheat flour</li>
+                    <li>30 g of sugar</li>
+                    <li>20 g of salt</li>
+                    <li>1 packet of dry yeast (10 g)</li>
+                    <li>300 mL of warm water</li>
+                    <li>60 mL of oil or melted butter</li>
+                    <li>1 egg (optional, for brushing on top)</li>
+                </ul>
+
+                <h2>Preparation</h2>
+                <ul class="preparation">
+                    <li>In a large bowl, mix the dry ingredients: flour, sugar, salt, and yeast.</li>
+                    <li>Gradually add the warm water, mixing until a dough forms.</li>
+                    <li>Add the oil or melted butter and knead the dough until smooth and elastic.</li>
+                    <li>Let the dough rest for 1 hour, covered with a cloth, until it doubles in size.</li>
+                    <li>Preheat the oven to 180°C (350°F).</li>
+                    <li>Shape the dough into a loaf and place it on a greased baking tray.</li>
+                    <li>Let it rest for another 30 minutes and brush with egg (if desired).</li>
+                    <li>Bake in the preheated oven for about 30-40 minutes or until golden brown.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mad & Dreamer. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

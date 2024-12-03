@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f0d7;
+    background-color: #f8f8f8;
     /* Cor de fundo leve */
     color: #333;
     /* Cor do texto */
@@ -136,3 +136,4 @@ footer {
         padding: 15px;
     }
 }
+
