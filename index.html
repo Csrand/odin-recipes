@@ -11,45 +11,45 @@
 </head>
 
 <body>
-<header class="header-container">
-    <div class="logo-title">
-        <img id="logo" src="./imgs/joker.png" alt="logo">
-        <h1>Survival Kit For Beginners!</h1>
-    </div>
-    <nav aria-label="Navegação principal">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="/receitas.html">Recipes</a></li>
-            <li><a href="#sobre">About</a></li>
-            <li><a href="#contato">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-
+    <header class="header-container">
+        <div class="logo-title">
+            <img id="logo" src="./imgs/joker.png" alt="logo">
+            <h1>Survival Kit For Beginners!</h1>
+        </div>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="/receitas.html">Recipes</a></li>
+                <li><a href="#sobre">About</a></li>
+                <li><a href="#contato">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section id="home">
             <h2>Survival Kit For Beginners!!</h2>
-            <p>"Discover Easy Recipes and Survive!!"</p>
+            <p>
+                Here, you'll find everything you need to get by in daily life, from simple recipes to practical tips for
+                tackling everyday problems. Whether it's cooking or handling other challenges, our focus is on giving
+                you the
+                tools to deal with anything, no fuss. Everything you need to survive and thrive, straightforward and
+                easy.
+            </p>
         </section>
-
+        <h2>Last Recipes</h2>
         <section id="last-recipe">
-            <h2>Last Recipes</h2>
-
-         
+            <!-- O conteúdo da última receita será injetado aqui -->
         </section>
 
         <article id="sobre">
             <h2>About Us</h2>
-            
-        
-            <h2>Welcome to Survival Kit For Beginners!</h2>
-            <p>                
-                Here, you'll find everything you need to get by in daily life, from simple recipes to practical tips for tackling
-                everyday problems. Whether it's cooking or handling other challenges, our focus is on giving you the tools to deal with
-                anything, no fuss. Everything you need to survive and thrive, straightforward and easy.
-            </p>
+            <p> We embrace the art of improvisation in cooking and aim to demystify recipes that seem
+            overly complicated on paper. Our goal is to show that cooking doesn't have to be intimidating—it's about adapting,
+            experimenting, and making it your own. We provide practical, straightforward recipes that empower you to create
+            delicious meals while encouraging creativity in the kitchen. Let’s simplify the process and rediscover the joy of
+            cooking!</p>
+           
         </article>
 
         <section id="contato">
@@ -71,8 +71,29 @@
             </form>
         </section>
     </main>
-    <script src="./js/]
-    script.js"></script>
+
+    <script>
+        // Buscar a seção onde será exibida a última receita
+        const lastRecipeSection = document.querySelector("#last-recipe");
+
+        // Buscar o arquivo recipes.json
+        fetch("recipes.json")
+            .then((response) => response.json()) // Converter a resposta para JSON
+            .then((data) => {
+                // Pegar a última receita
+                const lastRecipe = data.recipes[data.recipes.length - 1];
+
+                // Inserir o HTML para a última receita, incluindo imagem, título e descrição
+                lastRecipeSection.innerHTML = `
+                    <div class="recipe-item">
+                        <h3><a href="${lastRecipe.link}">${lastRecipe.title}</a></h3>
+                        <img src="${lastRecipe.image}" alt="${lastRecipe.title}" class="recipe-image">
+                        <p>${lastRecipe.description}</p>
+                    </div>
+                `;
+            })
+            .catch((error) => console.error("Erro ao carregar as receitas:", error));
+    </script>
 
     <footer>
         <p>&copy; Csrand 2024</p>
@@ -80,11 +101,12 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#receitas">Recipes</a></li>
-                <li><a href="#sobre">About </a></li>
+                <li><a href="#sobre">About</a></li>
                 <li><a href="#contato">Contact</a></li>
             </ul>
         </nav>
     </footer>
+
 </body>
 
 </html>

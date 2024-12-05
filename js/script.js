@@ -1,20 +1,16 @@
-// In script.js
-
-// Select the section in the HTML where the latest recipe will be displayed
-const lastRecipeSection = document.querySelector("#last-recipe");
-
-// Fetch the data from recipes.json
 fetch("recipes.json")
-  .then((response) => response.json()) // Convert the response to JSON
+  .then((response) => response.text()) // Usar text() primeiro para ver a resposta bruta
+  .then((text) => {
+    console.log(text); // Veja a resposta bruta
+    return JSON.parse(text); // Se o texto parecer correto, então parse
+  })
   .then((data) => {
-    // Get the last recipe in the array
+    // Processar o JSON
     const lastRecipe = data.recipes[data.recipes.length - 1];
-
-    // Insert HTML for the latest recipe
+    const lastRecipeSection = document.querySelector("#last-recipe");
     lastRecipeSection.innerHTML = `
-            <h2>Last Recipe</h2>
             <h3><a href="${lastRecipe.link}">${lastRecipe.title}</a></h3>
             <p>${lastRecipe.description}</p>
         `;
   })
-  .catch((error) => console.error("Error loading recipes:", error));
+  .catch((error) => console.error("Erro ao carregar as receitas:", error));

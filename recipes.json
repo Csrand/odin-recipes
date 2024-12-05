@@ -1,0 +1,19 @@
+{
+  "recipes": [
+    {
+      "title": "Simple Cake",
+      "link": "/receitas/simplecake.html",
+      "description": "A moist, simple cake perfect for any occasion.",
+      "image": "/imgs/simplecake.jpg"
+    },
+    {
+      "title": "Simple Bread",
+      "link": "/recitas/bread.html",
+      "description": "A timeless homemade bread recipe with a golden crust.",
+      "image": "/imgs/pao.webp"
+    }
+  ]
+}
+
+
+
